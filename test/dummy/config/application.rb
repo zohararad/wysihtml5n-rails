@@ -10,6 +10,7 @@ require "rails/test_unit/railtie"
 
 Bundler.require
 require "wysihtml5n-rails"
+require "sass-rails"
 
 module Dummy
   class Application < Rails::Application
@@ -60,6 +61,9 @@ module Dummy
 
     # Version of your assets, change this if you want to expire all your assets
     config.assets.version = '1.0'
+
+    # Set an easier to test css style
+    config.sass.style = :compact
   end
 end
 
