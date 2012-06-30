@@ -9,7 +9,7 @@ Gem::Specification.new do |s|
   s.version     = Wysihtml5n::Rails::VERSION
   s.authors     = ["Zohar Arad"]
   s.email       = ["zohar@zohararad.com"]
-  s.homepage    = "TODO"
+  s.homepage    = "https://github.com/zohararad/wysihtml5n-rails"
   s.summary     = "WYSIHTML5-Enhanced Rich Text editor, converted to SASS and Rails asset pipeline"
   s.description = "WYSIHTML5-Enhanced is an HTML5 rich text editor based on wysihtml5, with support for image drag & drop and UI powered by Twitter Bootstrap"
 
