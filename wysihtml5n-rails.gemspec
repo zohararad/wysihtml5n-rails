@@ -13,10 +13,11 @@ Gem::Specification.new do |s|
   s.summary     = "WYSIHTML5-Enhanced Rich Text editor, converted to SASS and Rails asset pipeline"
   s.description = "WYSIHTML5-Enhanced is an HTML5 rich text editor based on wysihtml5, with support for image drag & drop and UI powered by Twitter Bootstrap"
 
-  s.files = Dir["{app,config,db,lib}/**/*"] + ["LICENSE", "Rakefile", "README.md"]
+  s.files = Dir["{lib,vendor}/**/*"] + ["LICENSE", "README.md"]
   s.test_files = Dir["test/**/*"]
 
   s.add_dependency "rails", "~> 3.1"
+  s.add_dependency "railties", "~> 3.1"
   s.add_dependency "sass-rails", "~> 3.1"
   s.add_development_dependency 'rake', "~> 0.9.2"
 end
