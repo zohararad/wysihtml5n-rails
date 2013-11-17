@@ -12,6 +12,7 @@ Gem::Specification.new do |s|
   s.homepage    = "https://github.com/zohararad/wysihtml5n-rails"
   s.summary     = "WYSIHTML5-Enhanced Rich Text editor, converted to SASS and Rails asset pipeline"
   s.description = "WYSIHTML5-Enhanced is an HTML5 rich text editor based on wysihtml5, with support for image drag & drop and UI powered by Twitter Bootstrap"
+  s.license = 'MIT'
 
   s.files = Dir["{lib,vendor}/**/*"] + ["LICENSE", "README.md"]
   s.test_files = Dir["test/**/*"]
