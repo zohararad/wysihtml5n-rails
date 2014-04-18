@@ -17,7 +17,7 @@ class UsageCssSpec < Wysihtml5n::Rails::Spec
     end
 
     it 'must render the correct path for the icon sprites' do
-      app_css.must_include 'url(/assets/fontawesome-webfont.woff)'
+      app_css.must_include 'url(/assets/wysihtml5n/fontawesome-webfont.woff)'
     end
 
   end
@@ -49,7 +49,7 @@ class UsageCssSpec < Wysihtml5n::Rails::Spec
     end
 
     it 'must render the correct path for the icon sprites' do
-      sprockets_css.must_include 'url(/assets/fontawesome-webfont.woff)'
+      sprockets_css.must_include 'url(/assets/wysihtml5n/fontawesome-webfont.woff)'
     end
 
   end
