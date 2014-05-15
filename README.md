@@ -46,6 +46,23 @@ Finally, initialize the editor:
 $('.wysiwyg').wysiHTML5N();
 ```
 
+You can pass options to editor
+
+```javascript
+# use only some editor tools
+$('.wysiwyg').wysiHTML5N({toolbar: ['h1', 'h2', 'h3', 'p', 'bold', 'italic']})
+```
+
+### Font Awesome 3 vs 4
+
+By default gem uses Font Awesome 3 (`<i class="icon-bold"></i>`).
+
+To initialize editor with Font Awesome 4 icon style (`<i class="fa fa-bold"></i>`) :
+
+```javascript
+$('.wysiwyg').wysiHTML5N({icon_style: 'font_awesome_4'})
+```
+
 ## Dependencies
 
 Wysihtml5n-rails depends on:
