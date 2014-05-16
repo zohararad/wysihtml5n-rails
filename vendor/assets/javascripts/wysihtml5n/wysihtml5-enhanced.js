@@ -627,18 +627,40 @@
    */
   var WysiHTML5N = function(textarea, options){
 
+    // font awesome v3 and v4 icon styles
+    var font_awesom_icons = {
+      font_awesome_3: {
+        bold:         'icon-bold',
+        italic:       'icon-italic',
+        ol:           'icon-list-ol',
+        ul:           'icon-list-ul',
+        insertLink:   'icon-link',
+        insertImage:  'icon-picture',
+      },
+      font_awesome_4: {
+        bold:         'fa fa-bold',
+        italic:       'fa fa-italic',
+        ol:           'fa fa-list-ol',
+        ul:           'fa fa-list-ul',
+        insertLink:   'fa fa-link',
+        insertImage:  'fa fa-image',
+      }
+    }
+
+    var toolbar_icon = font_awesom_icons[options['icon_style']]
+
     // define editor toolbar HTML components
     var toolbar = {
       h1:           '<li data-wysihtml5-command="formatBlock" data-wysihtml5-command-value="h1" title="Insert headline 1" class="command btn">H1</li>',
       h2:           '<li data-wysihtml5-command="formatBlock" data-wysihtml5-command-value="h2" title="Insert headline 2" class="command btn">H2</li>',
       h3:           '<li data-wysihtml5-command="formatBlock" data-wysihtml5-command-value="h3" title="Insert headline 3" class="command btn">H3</li>',
       p:            '<li data-wysihtml5-command="formatBlock" data-wysihtml5-command-value="p" title="Insert paragraph" class="command btn">P</li>',
-      bold:         '<li data-wysihtml5-command="bold" title="Make text bold (CTRL + B)" class="command btn"><i class="icon-bold"></i></li>',
-      italic:       '<li data-wysihtml5-command="italic" title="Make text italic (CTRL + I)" class="command btn"><i class="icon-italic"></i></li>',
-      ol:           '<li data-wysihtml5-command="insertOrderedList" title="Insert an ordered list" class="command btn"><i class="icon-list-ol"></i></li>',
-      ul:           '<li data-wysihtml5-command="insertUnorderedList" title="Insert an unordered list" class="command btn"><i class="icon-list-ul"></i></li>',
-      insertLink:   '<li data-wysihtml5-command="createLink" title="Insert a link" class="command btn"><i class="icon-link"></i></li>',
-      insertImage:  '<li data-wysihtml5-command="insertImage" title="Insert an image" class="command btn"><i class="icon-picture"></i></li>',
+      bold:         '<li data-wysihtml5-command="bold" title="Make text bold (CTRL + B)" class="command btn"><i class="' + toolbar_icon['bold'] + '"></i></li>',
+      italic:       '<li data-wysihtml5-command="italic" title="Make text italic (CTRL + I)" class="command btn"><i class="' + toolbar_icon['italic'] + '"></i></li>',
+      ol:           '<li data-wysihtml5-command="insertOrderedList" title="Insert an ordered list" class="command btn"><i class="' + toolbar_icon['ol'] + '"></i></li>',
+      ul:           '<li data-wysihtml5-command="insertUnorderedList" title="Insert an unordered list" class="command btn"><i class="' + toolbar_icon['ul'] + '"></i></li>',
+      insertLink:   '<li data-wysihtml5-command="createLink" title="Insert a link" class="command btn"><i class="' + toolbar_icon['insertLink'] + '"></i></li>',
+      insertImage:  '<li data-wysihtml5-command="insertImage" title="Insert an image" class="command btn"><i class="' + toolbar_icon['insertImage'] + '"></i></li>',
       changeView:   '<li data-wysihtml5-action="change_view" title="Show HTML" class="action btn">&lt;/&gt;</li>',
       modals: {
         insertLink:'<div class="modal" data-wysihtml5-dialog="createLink" style="display: none;">' +
@@ -771,6 +793,7 @@
     toolbar: [
       'h1', 'h2', 'h3', 'p', 'bold', 'italic', 'ul', 'ol', 'insertLink', 'insertImage', 'changeView'
     ],
+    icon_style: 'font_awesome_3',
     stylesheets: [],
     parserRules: parserRules,
     imageEditor: {
